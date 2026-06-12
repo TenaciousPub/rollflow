@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/rollflow/">
+<!-- BASE:END -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>RollFlow — AI Automation That Runs Your Business While You Sleep</title>
+<meta name="description" content="RollFlow builds custom AI agents and automation systems that handle leads, customer support, sales, and operations — so your team can focus on growth." />
+<meta property="og:title" content="RollFlow — AI Automation That Runs Your Business While You Sleep" />
+<meta property="og:description" content="RollFlow builds custom AI agents and automation systems that handle leads, customer support, sales, and operations — so your team can focus on growth." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="RollFlow — AI Automation That Runs Your Business While You Sleep" />
+<meta name="twitter:description" content="RollFlow builds custom AI agents and automation systems that handle leads, customer support, sales, and operations — so your team can focus on growth." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-morihgvg-vc2bm";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  var u=new URL(location.href);var found=null;var changed=false;
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{localStorage.setItem(map[p]+slug,v);}catch(e){}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug);}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=3761');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='rG8vXKTjk';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<nav data-section="navbar">
+  <div class="logo">
+    <img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F51%2F1777921173762_ChatGPT_Image_May_4__2026_at_11_53_01_AM-removebg-preview.png" alt="RollFlow logo" />
+    <span>RollFlow</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+</nav>
+
+<section class="hero" data-section="hero">
+  <div class="hero-badge"><span class="mono">AI Automation Agency</span></div>
+  <h1>Your business on <em>autopilot</em>.<br>Powered by intelligent AI.</h1>
+  <p class="hero-sub">RollFlow builds custom AI agents and automation systems that capture leads, answer customers, close deals, and run operations 24/7 — so your team focuses on what humans do best.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Book a Free Strategy Call →</a>
+    <a href="#services" class="btn-secondary">See What We Build</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num" data-target="24">0</div><div class="stat-label">Hours / Day Active</div></div>
+    <div class="stat"><div class="stat-num" data-target="80">0<span style="font-size:.6em">%</span></div><div class="stat-label">Tasks Automated</div></div>
+    <div class="stat"><div class="stat-num" data-target="10">0<span style="font-size:.6em">x</span></div><div class="stat-label">Faster Response</div></div>
+    <div class="stat"><div class="stat-num" data-target="0">0</div><div class="stat-label">Missed Leads</div></div>
+  </div>
+</section>
+
+<section id="services" data-section="services">
+  <div class="section-head reveal">
+    <div>
+      <div class="mono">What We Build</div>
+      <h2 style="margin-top:14px">Custom AI systems built around <em>your business</em>.</h2>
+    </div>
+    <p>Every business runs different. We don't sell templates — we map your workflow, find the bottlenecks, and deploy AI agents that actually move the needle.</p>
+  </div>
+  <div class="svc-list">
+    <div class="svc reveal"><div class="svc-num">01</div><h3>AI Sales Agents</h3><p>Custom chatbots that qualify leads, book calls, and follow up — across web, SMS, Instagram, and Messenger. Trained on your offer, your tone.</p></div>
+    <div class="svc reveal"><div class="svc-num">02</div><h3>Customer Support Automation</h3><p>Voice and text AI that handles 80%+ of support tickets instantly, escalating only what truly needs a human. Response times drop to seconds.</p></div>
+    <div class="svc reveal"><div class="svc-num">03</div><h3>Workflow Automation</h3><p>Connect your tools — CRM, email, calendar, payments, spreadsheets — into one seamless system. No more copy-paste. No more dropped balls.</p></div>
+    <div class="svc reveal"><div class="svc-num">04</div><h3>Lead Generation Engines</h3><p>AI-powered outbound: scraping, enriching, personalizing, sending, and tracking replies — building your pipeline while you sleep.</p></div>
+    <div class="svc reveal"><div class="svc-num">05</div><h3>Custom AI Integrations</h3><p>GPT, Claude, Gemini wired into the apps you already use. Smart docs, intelligent search, content generation — built into your stack.</p></div>
+    <div class="svc reveal"><div class="svc-num">06</div><h3>Analytics &amp; Reporting</h3><p>Automated dashboards and AI-driven insights. Stop digging through data — get the story your numbers are telling, delivered to your inbox.</p></div>
+  </div>
+</section>
+
+<section id="process" data-section="how-it-works">
+  <div class="section-head reveal">
+    <div>
+      <div class="mono">How It Works</div>
+      <h2 style="margin-top:14px">From <em>first call</em> to fully deployed in weeks.</h2>
+    </div>
+    <p>No bloated retainers. No vague promises. A clear process that gets your AI systems working — fast.</p>
+  </div>
+  <div class="process">
+    <div class="step reveal"><div class="step-num">01</div><h3>Discover</h3><p>Free strategy call. We map your workflow, identify the highest-leverage automations, and show you exactly where AI saves time and makes money.</p></div>
+    <div class="step reveal"><div class="step-num">02</div><h3>Design</h3><p>We architect your custom AI system — agents, integrations, data flow, escalation rules — and walk you through it before anything ships.</p></div>
+    <div class="step reveal"><div class="step-num">03</div><h3>Deploy</h3><p>We build it, train it on your business, integrate with your tools, and test end-to-end. Live in your environment within weeks.</p></div>
+    <div class="step reveal"><div class="step-num">04</div><h3>Optimize</h3><p>AI gets smarter with feedback. We monitor performance, refine prompts, adjust flows, and scale — making the system better every month.</p></div>
+  </div>
+</section>
+
+<section id="pricing" data-section="pricing">
+  <div class="section-head reveal">
+    <div>
+      <div class="mono">Pricing</div>
+      <h2 style="margin-top:14px">Simple, transparent <em>pricing</em>.</h2>
+    </div>
+    <p>No surprise invoices. No vague hourly rates. Pick the tier that fits where you are, upgrade anytime.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="plan reveal">
+      <div class="plan-name">Starter</div>
+      <div class="plan-price">$497<span> / mo</span></div>
+      <p class="plan-desc">Perfect for small businesses ready to automate their first workflow and stop losing leads.</p>
+      <ul class="plan-features">
+        <li>1 custom AI agent (chat or voice)</li>
+        <li>Lead capture + CRM integration</li>
+        <li>1 automated workflow (email / SMS)</li>
+        <li>Monthly performance review</li>
+        <li>Email support</li>
+      </ul>
+      <a href="#contact" class="btn-secondary">Get Started →</a>
+    </div>
+    <div class="plan featured reveal">
+      <div class="plan-name">Growth</div>
+      <div class="plan-price">$997<span> / mo</span></div>
+      <p class="plan-desc">For growing teams that need a full automation stack — sales, support, and operations running on AI.</p>
+      <ul class="plan-features">
+        <li>Up to 3 custom AI agents</li>
+        <li>Full CRM + calendar + payment integration</li>
+        <li>Unlimited automated workflows</li>
+        <li>AI lead gen engine (outbound)</li>
+        <li>Bi-weekly strategy calls</li>
+        <li>Priority Slack support</li>
+        <li>Monthly optimization sprints</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Get Started →</a>
+    </div>
+    <div class="plan reveal">
+      <div class="plan-name">Enterprise</div>
+      <div class="plan-price">Custom<span> pricing</span></div>
+      <p class="plan-desc">Full-service AI transformation for teams with complex workflows, multiple departments, or high-volume operations.</p>
+      <ul class="plan-features">
+        <li>Unlimited AI agents &amp; integrations</li>
+        <li>Custom model fine-tuning</li>
+        <li>Dedicated account manager</li>
+        <li>SLA with guaranteed uptime</li>
+        <li>Onsite onboarding available</li>
+        <li>Quarterly executive reviews</li>
+      </ul>
+      <a href="#contact" class="btn-secondary">Book a Call →</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta-section" data-section="cta">
+  <div class="mono reveal">Get Started</div>
+  <h2 class="reveal">Ready to put your business on autopilot?</h2>
+  <p class="reveal">Tell us where you're stuck. We'll show you what's possible. No pitch, no pressure — just a clear plan.</p>
+  <form class="cta-form reveal" onsubmit="event.preventDefault();alert('Thanks! We\'ll be in touch within 24 hours.');this.reset();">
+    <input type="email" placeholder="your@email.com" required />
+    <button type="submit" class="btn-primary">Get Started →</button>
+  </form>
+</section>
+
+<footer data-section="footer">
+  <div class="logo">
+    <img src="https://paymegpt.com/api/landing-pages/images/coding-agent-assets%2F51%2F1777921173762_ChatGPT_Image_May_4__2026_at_11_53_01_AM-removebg-preview.png" alt="RollFlow logo" />
+    <span>RollFlow</span>
+  </div>
+  <p>© 2026 RollFlow · AI Automation Agency · Built for businesses that move.</p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
