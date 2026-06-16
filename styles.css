@@ -94,12 +94,19 @@
   .cta-section .mono{color:rgba(255,255,255,.75)}
   .cta-section h2{max-width:760px;margin:14px 0 18px;color:#fff}
   .cta-section>p{color:rgba(255,255,255,.85);font-size:1.08rem;max-width:540px;margin-bottom:38px}
-  .cta-form{max-width:520px;display:flex;gap:10px;flex-wrap:wrap}
-  .cta-form input{flex:1;min-width:230px;padding:15px 20px;background:rgba(11,8,16,.25);border:1px solid rgba(255,255,255,.35);border-radius:4px;color:#fff;font-family:'Archivo',sans-serif;font-size:.95rem;transition:all .25s}
-  .cta-form input::placeholder{color:rgba(255,255,255,.7)}
-  .cta-form input:focus{outline:none;border-color:#fff;background:rgba(11,8,16,.4)}
-  .cta-form .btn-primary{background:#0B0810;color:#fff}
-  .cta-form .btn-primary:hover{background:#1A1126;box-shadow:none}
+
+  /* Contact form */
+  .cta-form{max-width:580px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:2}
+  .cta-form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:560px){.cta-form-row{grid-template-columns:1fr}}
+  .cta-field{display:flex;flex-direction:column;gap:6px}
+  .cta-label{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:500}
+  .cta-input{padding:13px 18px;background:rgba(11,8,16,.25);border:1px solid rgba(255,255,255,.3);border-radius:4px;color:#fff;font-family:'Archivo',sans-serif;font-size:.95rem;transition:all .25s;width:100%}
+  .cta-input::placeholder{color:rgba(255,255,255,.5)}
+  .cta-input:focus{outline:none;border-color:rgba(255,255,255,.7);background:rgba(11,8,16,.4)}
+  textarea.cta-input{resize:vertical;min-height:100px;line-height:1.55}
+  .cta-submit{padding:15px 32px;background:#0B0810;border:none;color:#fff;border-radius:4px;font-family:'Archivo',sans-serif;font-weight:600;font-size:.93rem;cursor:pointer;transition:background .25s,transform .25s;align-self:flex-start}
+  .cta-submit:hover{background:#1A1126;transform:translateY(-1px)}
 
   footer{border-top:1px solid var(--line-soft);padding:46px 5vw;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--dim);font-size:.86rem}
   footer .logo{font-size:1.05rem}
