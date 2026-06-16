@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://TenaciousPub.github.io/rollflow/sitemap.xml
+Sitemap: https://rollflow.net/sitemap.xml
