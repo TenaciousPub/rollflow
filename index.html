@@ -348,10 +348,33 @@
 <section id="contact" class="cta-section" data-section="cta">
   <div class="mono reveal">Get Started</div>
   <h2 class="reveal">Ready to put your business on autopilot?</h2>
-  <p class="reveal">Tell us where you're stuck. We'll show you what's possible. No pitch, no pressure — just a clear plan.</p>
-  <form class="cta-form reveal" onsubmit="event.preventDefault();alert('Thanks! We\'ll be in touch within 24 hours.');this.reset();">
-    <input type="email" placeholder="your@email.com" required />
-    <button type="submit" class="btn-primary">Get Started →</button>
+  <p class="reveal">Tell us about your business. We'll come to the call already knowing where AI can help you most.</p>
+  <form class="cta-form reveal" id="contactForm">
+    <div class="cta-form-row">
+      <div class="cta-field">
+        <label class="cta-label" for="cf-name">Your name</label>
+        <input class="cta-input" id="cf-name" name="name" type="text" placeholder="Jane Smith" required />
+      </div>
+      <div class="cta-field">
+        <label class="cta-label" for="cf-email">Email address</label>
+        <input class="cta-input" id="cf-email" name="email" type="email" placeholder="jane@yourbiz.com" required />
+      </div>
+    </div>
+    <div class="cta-form-row">
+      <div class="cta-field">
+        <label class="cta-label" for="cf-phone">Phone number</label>
+        <input class="cta-input" id="cf-phone" name="phone" type="tel" placeholder="(916) 555-0100" />
+      </div>
+      <div class="cta-field">
+        <label class="cta-label" for="cf-industry">Business type / industry</label>
+        <input class="cta-input" id="cf-industry" name="industry" type="text" placeholder="e.g. barbershop, HVAC, real estate" required />
+      </div>
+    </div>
+    <div class="cta-field">
+      <label class="cta-label" for="cf-pains">What's costing you time or money every week?</label>
+      <textarea class="cta-input" id="cf-pains" name="pains" placeholder="e.g. missing calls after hours, no-shows, manually following up on leads, buried in DMs..." required></textarea>
+    </div>
+    <button type="submit" class="cta-submit">Send it — let's talk →</button>
   </form>
 </section>
 
